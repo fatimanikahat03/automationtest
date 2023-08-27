@@ -25,7 +25,7 @@ public class MyStepdefs {
         @Given("Enter URL in  Browser")
         public void urlb()
         {
-
+try{
 EdgeDriverService service = new EdgeDriverService.Builder()
     .usingDriverExecutable(new File("C://Users//Lenovo//Downloads//edgedriver_win64 (5)//msedgedriver")).build();
            EdgeOptions options = new EdgeOptions();
@@ -43,7 +43,11 @@ WebDriver driver = new EdgeDriver(service, options);
             driver.get("https://www.facebook.com");
 
         }
-
+           catch(Exception e)
+   {
+      System.out.println("hhhhhhhhhhhhhhhhhhhhhhhh");
+   }
+        }
     @When("Click on new account button")
     public void clickOnNewAccountButton() {
         WebElement g = driver.findElement(By.className("_9vtf"));
