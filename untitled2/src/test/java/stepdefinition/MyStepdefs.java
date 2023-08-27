@@ -13,6 +13,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.edge.EdgeOptions;
+
 
 import java.io.IOException;
 import java.time.Duration;
@@ -26,7 +28,12 @@ public class MyStepdefs {
 
 EdgeDriverService service = new EdgeDriverService.Builder()
     .usingDriverExecutable(new File("C://Users//Lenovo//Downloads//edgedriver_win64 (5)//msedgedriver")).build();
-WebDriver driver = new EdgeDriver(service);
+           EdgeOptions options = new EdgeOptions();
+options.addArguments("--disable-dev-shm-usage");
+options.addArguments("--no-sandbox");
+WebDriver driver = new EdgeDriver(service, options);
+
+//WebDriver driver = new EdgeDriver(service);
 
           //  driver=new EdgeDriver();
           //  driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
