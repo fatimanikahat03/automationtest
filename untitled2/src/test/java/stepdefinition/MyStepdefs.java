@@ -22,7 +22,7 @@ public class MyStepdefs {
         {
 
 EdgeDriverService service = new EdgeDriverService.Builder()
-    .usingDriverExecutable(new File("C:/Users/Lenovo/Downloads/edgedriver_win64 (5)/msedgedriver")).build();
+    .usingDriverExecutable(new File("C://Users//Lenovo//Downloads//edgedriver_win64 (5)//msedgedriver")).build();
 WebDriver driver = new EdgeDriver(service);
 
           //  driver=new EdgeDriver();
