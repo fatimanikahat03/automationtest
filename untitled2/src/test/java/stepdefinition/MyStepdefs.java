@@ -13,14 +13,20 @@ import org.openqa.selenium.support.ui.Select;
 
 import java.io.IOException;
 import java.time.Duration;
+import org.openqa.selenium.edge.EdgeDriverService;
 
 public class MyStepdefs {
    WebDriver driver;
         @Given("Enter URL in  Browser")
         public void urlb()
         {
-            driver=new EdgeDriver();
-            driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+
+EdgeDriverService service = new EdgeDriverService.Builder()
+    .usingDriverExecutable(new File("C:/Users/Lenovo/Downloads/edgedriver_win64 (5)/msedgedriver")).build();
+WebDriver driver = new EdgeDriver(service);
+
+          //  driver=new EdgeDriver();
+          //  driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 
             driver.manage().window().maximize();
             // driver=new ChromeDriver();https://github.com/fatimanikahat03/jenkins2.git
