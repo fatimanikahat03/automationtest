@@ -33,13 +33,7 @@ options.addArguments("--disable-dev-shm-usage");
 options.addArguments("--no-sandbox");
 WebDriver driver = new EdgeDriver(service, options);
 
-//WebDriver driver = new EdgeDriver(service);
-
-          //  driver=new EdgeDriver();
-          //  driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
-
             driver.manage().window().maximize();
-            // driver=new ChromeDriver();https://github.com/fatimanikahat03/jenkins2.git
             driver.get("https://www.facebook.com");
 
         }
